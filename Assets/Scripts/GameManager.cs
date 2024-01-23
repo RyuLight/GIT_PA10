@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class GameManager : MonoBehaviour
     {
         Score += value;
         Txt_Score.text = "SCORE : " + Score;
+    }
+
+    public void OnRestart()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
     private void StartGame()

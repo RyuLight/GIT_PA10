@@ -6,6 +6,12 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     [SerializeField] private float Speed = 3;
+    private Player player;
+
+    private void Start()
+    {
+        player = GameObject.Find("AngryDuck").GetComponent<Player>();
+    }
 
     void Update()
     {
